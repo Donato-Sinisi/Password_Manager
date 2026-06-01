@@ -1,11 +1,11 @@
 # Password Manager
 
-# ENGLISH
+## ENGLISH
 A simple command-line password manager written in Python.
 
 The application allows users to securely store, manage, and retrieve passwords protected by a master password. All credentials are encrypted before being saved to disk using the Fernet symmetric encryption scheme from the `cryptography` library.
 
-# Features
+## Features
 
 * Master password authentication
 * Secure password storage with encryption
@@ -14,9 +14,9 @@ The application allows users to securely store, manage, and retrieve passwords p
 * Clipboard support for quick password copying
 * Local encrypted storage
 
-# How It Works:
+## How It Works:
 
-# 1) First Run
+### 1) First Run
 
 When the application is executed for the first time:
 
@@ -25,7 +25,7 @@ When the application is executed for the first time:
 3. A cryptographic key is derived from the master password using PBKDF2-HMAC-SHA256.
 4. An encrypted password database (`password.enc`) is created.
 
-# 2) Authentication
+### 2) Authentication
 
 On subsequent executions:
 
@@ -34,7 +34,7 @@ On subsequent executions:
 3. The encrypted database is decrypted using the derived key.
 4. If decryption succeeds, access is granted.
 
-# 3) Data Storage
+### 3) Data Storage
 
 Passwords are stored as a list of records:
 
@@ -50,7 +50,7 @@ Passwords are stored as a list of records:
 
 The data is serialized to JSON, encrypted with Fernet, and saved inside `password.enc`.
 
-# 4) Security
+### 4) Security
 
 The project uses:
 
@@ -60,7 +60,7 @@ The project uses:
 * Fernet authenticated encryption
 * Cryptographically secure password generation via Python's `secrets` module
 
-# 5) Requirements
+### 5) Requirements
 
 Install dependencies:
 
@@ -68,7 +68,7 @@ Install dependencies:
 pip install cryptography pyperclip
 ```
 
-# 6) Usage
+### 6) Usage
 
 Run the application:
 
@@ -85,7 +85,7 @@ Available operations:
 5. Exit
 
 
-# Modules
+## Modules
 
 1) crypto_manager.py
 
@@ -109,7 +109,7 @@ Handles:
 
 Provides the command-line user interface and coordinates the application workflow.
 
-# Disclaimer
+## Disclaimer
 
 This project was developed for educational purposes and personal use. While it implements modern cryptographic primitives, it has not undergone a professional security audit and should not be considered a production-grade password manager.
 
@@ -117,12 +117,12 @@ This project was developed for educational purposes and personal use. While it i
 
 # Gestore di password
 
-# ITALIANO
+## ITALIANO
 Un semplice gestore di password a riga di comando scritto in Python.
 
 L'applicazione consente agli utenti di archiviare, gestire e recuperare in modo sicuro le password protette da una password principale. Tutte le credenziali vengono crittografate prima di essere salvate su disco utilizzando lo schema di crittografia simmetrica Fernet della libreria `cryptography`.
 
-# Funzionalità
+## Funzionalità
 
 * Autenticazione tramite password principale
 * Archiviazione sicura delle password con crittografia
@@ -131,9 +131,9 @@ L'applicazione consente agli utenti di archiviare, gestire e recuperare in modo 
 * Supporto per gli appunti per copiare rapidamente le password
 * Archiviazione locale crittografata
 
-# Come funziona:
+## Come funziona:
 
-# 1) Prima esecuzione
+### 1) Prima esecuzione
 
 Quando l'applicazione viene eseguita per la prima volta:
 
@@ -142,7 +142,7 @@ Quando l'applicazione viene eseguita per la prima volta:
 3. Viene derivata una chiave crittografica dalla password principale utilizzando PBKDF2-HMAC-SHA256.
 4. Viene creato un database di password crittografato (`password.enc`).
 
-# 2) Autenticazione
+### 2) Autenticazione
 
 Alle esecuzioni successive:
 
@@ -151,7 +151,7 @@ Alle esecuzioni successive:
 3. Il database crittografato viene decrittografato utilizzando la chiave derivata.
 4. Se la decrittazione ha successo, l'accesso viene concesso.
 
-# 3) Archiviazione dei dati
+### 3) Archiviazione dei dati
 
 Le password vengono memorizzate come un elenco di record:
 
@@ -168,7 +168,7 @@ Le password vengono memorizzate come un elenco di record:
 I dati vengono serializzati in JSON, crittografati con Fernet e salvati all'interno di `password.enc`.
 
 
-# 4) Sicurezza
+### 4) Sicurezza
 
 Il progetto utilizza:
 
@@ -178,7 +178,7 @@ Il progetto utilizza:
 * Crittografia autenticata con Fernet
 * Generazione di password crittograficamente sicura tramite il modulo `secrets` di Python
 
-# 5) Requisiti
+### 5) Requisiti
 
 Installa le dipendenze:
 
@@ -186,7 +186,7 @@ Installa le dipendenze:
 pip install cryptography pyperclip
 ```
 
-# 6) Utilizzo
+### 6) Utilizzo
 
 Esegui l'applicazione:
 
@@ -202,7 +202,7 @@ Operazioni disponibili:
 4. Elimina password
 5. Esci
 
-# Moduli
+## Moduli
 
 1) crypto_manager.py
 
@@ -226,6 +226,6 @@ Gestisce:
 
 Fornisce l'interfaccia utente a riga di comando e coordina il flusso di lavoro dell'applicazione.
 
-# Avvertenza
+## Avvertenza
 
 Questo progetto è stato sviluppato a scopo didattico e per uso personale. Sebbene implementi primitive crittografiche moderne, non è stato sottoposto a una revisione di sicurezza professionale e non deve essere considerato un gestore di password di livello professionale.
